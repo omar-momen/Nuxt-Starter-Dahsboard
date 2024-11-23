@@ -64,7 +64,7 @@
         </div>
       </div>
 
-      <div class="flex gap-5 items-center">
+      <div class="flex flex-wrap gap-x-5 gap-y-0 items-center">
         <!-- Select -->
         <UFormGroup :label="$t('table.per_page')" name="par_page">
           <SelectInput
