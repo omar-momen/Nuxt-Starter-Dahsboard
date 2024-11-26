@@ -1,5 +1,5 @@
 <template>
-  <div class="skelton-table">
+  <table class="skelton-table">
     <thead
       class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 block"
     >
@@ -58,7 +58,7 @@
         </th>
       </tr>
     </tbody>
-  </div>
+  </table>
 </template>
 
 <script lang="ts" setup>
