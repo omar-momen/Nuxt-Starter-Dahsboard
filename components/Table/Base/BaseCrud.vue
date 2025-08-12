@@ -7,8 +7,8 @@ const props = defineProps<{
   filters: any[];
   expandable?: boolean;
   external_form?: boolean;
-  selectable?: boolean;
-  dragable?: boolean;
+  selectable: boolean | false;
+  draggable?: boolean;
   permissions: {
     create?: string;
     read?: string;
@@ -87,7 +87,7 @@ function select(row: Row) {
     (checkboxes[0] as HTMLInputElement).checked = false;
   }
 }
-function select_deselct_all() {
+function select_deselect_all() {
   const checkboxes = document.querySelectorAll(
     `.${props.endpoint}-crud input[type="checkbox"]`
   );
@@ -220,7 +220,7 @@ const dragOptions = computed(() => {
   return {
     animation: 200,
     group: "description",
-    disabled: !props.dragable,
+    disabled: !props.draggable,
     ghostClass: "ghost",
   };
 });
@@ -296,7 +296,7 @@ const onDragEnd = async (event: any) => {
                       v-if="selectable"
                       scope="col"
                       class="p-4"
-                      @change="select_deselct_all"
+                      @change="select_deselect_all"
                     >
                       <div class="flex items-center">
                         <UCheckbox name="notifications" />

@@ -14,7 +14,7 @@
     }"
     endpoint="tasks"
     selectable
-    dragable
+    draggable
   >
     <!-- Data Cells Slots use it with [`column.key`-data] -->
     <template #created_at-data="{ row, column }">

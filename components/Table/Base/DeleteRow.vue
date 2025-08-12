@@ -42,5 +42,3 @@ defineProps<{
   delete_loading: boolean;
 }>();
 </script>
-
-<style></style>
